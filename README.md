@@ -1,7 +1,5 @@
 # Host Records App
 
-<a href="http://s723.photobucket.com/user/tom_weston2/media/example_zps49e6fp6h.png.html" target="_blank"><img src="http://i723.photobucket.com/albums/ww236/tom_weston2/example_zps49e6fp6h.png" border="0" alt=" photo example_zps49e6fp6h.png"/></a>
-
 This repo contains the code for a RESTful API Host Records App that was built using the MEAN stack:
 
 <ul>
@@ -10,6 +8,10 @@ This repo contains the code for a RESTful API Host Records App that was built us
 <li>AngularJS</li>
 <li>NodeJS</li>
 </ul>
+
+<h3>Example</h3>
+
+<a href="http://s723.photobucket.com/user/tom_weston2/media/example_zps49e6fp6h.png.html" target="_blank"><img src="http://i723.photobucket.com/albums/ww236/tom_weston2/example_zps49e6fp6h.png" border="0" alt=" photo example_zps49e6fp6h.png"/></a>
 
 <h3>Instructions</h3>
 
