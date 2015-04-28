@@ -1,7 +1,5 @@
 # Host Records App
 
-<img src="" alt="Host Records App">
-
 This repo contains the code for a RESTful API Host Records App that was built using the MEAN stack:
 
 <ul>
