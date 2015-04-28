@@ -26,3 +26,13 @@ then make sure MongoDB is running with
 from your MongoDB directory, and then run the code with 
 
     node server
+
+<h3>Todo List</h3>
+
+<ul>
+<li>Add User Authentication using express-stormpath - https://docs.stormpath.com/nodejs/express/quickstart.html</li>
+<li>Create new dashboard views - eg. Total host count</li>
+<li>Limit number of hosts shown on dashboard to latest entries only</li>
+<li>Force IP Address field to be unique to avoid duplicates</li>
+<li>Search functionality</li>
+</ul> 
