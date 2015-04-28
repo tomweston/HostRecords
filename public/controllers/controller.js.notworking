@@ -1,0 +1,29 @@
+var myApp = angular.module('myApp', []);
+myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+    console.log("Controller is working!");
+
+      var refresh = function(){
+        $http.get('/hostrecord').success(function(response) {
+          console.log("I can recieve data!");
+          $scope.hostrecord = response;
+          $scope.host = "";
+        });
+      };
+
+      refresh();
+
+      $scope.addHost = function(){
+        console.log($scope.host);
+        $http.post('/hostrecord', $scope.host).success(function(response) {
+          console.log(response);
+          refresh();
+        });
+      };
+
+      $scope.remove = function(id) {
+        console.log(id);
+        $http.delete('/hostrecord/' + id).success(function(response) {
+          refresh();
+        });
+
+}]);

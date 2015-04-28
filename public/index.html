@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+  <!--Bootstrap-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!--Bootstrap-->
+  <title>Host Records</title>
+</head>
+
+<body>
+  <div class="container" ng-controller="AppCtrl">
+    <h1>Host Records</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Hostname</th>
+          <th>IP Address</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="host.h"></td>
+          <td><input class="form-control" ng-model="host.ip"></td>
+          <td><input class="form-control" ng-model="host.u"></td>
+          <td><input class="form-control" ng-model="host.p"></td>
+          <td><button class="btn btn-pri" ng-click="addHost()">Add Host</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
+          <button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="host in hostrecord">
+          <td>{{host.h}}</td>
+          <td>{{host.ip}}</td>
+          <td>{{host.u}}</td>
+          <td>{{host.p}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(host._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(host._id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+  <script src="/controllers/controller.js"></script>
+</body>
+</html>
