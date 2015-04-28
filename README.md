@@ -1,5 +1,4 @@
 # Host Records App
-<h2>Host Records App</h2>
 
 <img src="" alt="Host Records App">
 
