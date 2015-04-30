@@ -1,5 +1,6 @@
 <!DOCTYPE>
 <html ng-app="myApp">
+
 <head>
   <!--Bootstrap-->
   <!-- Latest compiled and minified CSS -->
@@ -8,55 +9,40 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <!--Fontawesome-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <title>Host Records</title>
+  <title>Host Records - Dashboard</title>
 </head>
 
 <body>
   <ol class="breadcrumb">
-  <li><a href="index.html">Host Records</a></li>
-  <li class="active">Device Manager</li>
-</ol>
-  <div class="container" ng-controller="AppCtrl">
-    <h1><i class="fa fa-server"></i>  Device Manager</h1>
-    <p class="lead">When adding new entries, ensure you use the full <mark><abbr title="Fully Qualified Domain Name">FQDN</abbr></mark> for the host.</p>
+    <li class="active"><a href="index.html">Dashboard</a></li>
+    <li><a href="dm.html">Device Manager</a></li>
+  </ol>
+<div>
+  &nbsp;
+  &nbsp;
+  <p class="lead text-primary" align="center"><i class="fa fa-sellsy fa-2x"> Host Records</i></p>
+  &nbsp;
+  &nbsp;
+  <!--start of full viewport divider -->
+    <div class="row" style="padding-left:30px; padding-right:30px;">
+      <div class="col-xs-6 col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item"><span class="badge">not yet working</span>Devices</li>
+            <li class="list-group-item"><span class="badge">not yet working</span>Environments</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <p class="lead">Get a clear and concise overview of all the <a href="">devices</a> in your <a href="">environment</a>.</p>
+        </div>
+        <!--end of full viewport divider -->
+      <script>db.hostrecord.count(function(err, docs){});</script>
 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Hostname</th>
-          <th>IP Address</th>
-          <th>Username</th>
-          <th>Password</th>
-          <th>Action</th>
-          <th>&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input class="form-control" ng-model="host.h"></td>
-          <td><input class="form-control" ng-model="host.ip"></td>
-          <td><input class="form-control" ng-model="host.u"></td>
-          <td><input class="form-control" ng-model="host.p"></td>
-          <td><button class="btn btn-primary" ng-click="addHost()"><i class="fa fa-plus"> Add Host</button></td>
-          <td><button class="btn btn-info" ng-click="update()"><i class="fa fa-refresh"> Update</button></i>&nbsp;&nbsp;
-          <button class="btn btn-info" ng-click="deselect()"><i class="fa fa-magic"> Clear</button></td>
-        </tr>
-        <tr ng-repeat="host in hostrecord">
-          <td>{{host.h}}</td>
-          <td>{{host.ip}}</td>
-          <td>{{host.u}}</td>
-          <td>{{host.p}}</td>
-          <td><button class="btn btn-danger" ng-click="remove(host._id)"><i class="fa fa-trash-o"> Delete</button></td>
-          <td><button class="btn btn-warning" ng-click="edit(host._id)"><i class="fa fa-pencil"> Edit</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div>
+      </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular-animate.min.js"></script>
   <script src="/controllers/controller.js"></script>
 </body>
+
 </html>

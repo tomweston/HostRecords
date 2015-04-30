@@ -21,6 +21,10 @@ $scope.addHost = function() {
   });
 };
 
+//count
+
+//count
+
 $scope.remove = function(id) {
   //console.log(id);
   $http.delete('/hostrecord/' + id).success(function(response) {

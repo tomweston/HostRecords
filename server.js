@@ -3,9 +3,14 @@ var app = express();
 var mongojs = require('mongojs');
 var db = mongojs('hostrecord', ['hostrecord']);
 var bodyParser = require('body-parser');
+var ping = require ("net-ping");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
+
+//count
+
+//count
 
 app.get('/hostrecord', function(req, res) {
   //console.log("I recieved a GET request")
@@ -39,6 +44,14 @@ app.get('/hostrecord/:id', function (req, res) {
   });
 });
 
+app.get('/hostrecord/:id', function (req, res) {
+  var id = req.params.id;
+  //console.log(id);
+  db.hostrecord.count({_id: mongojs.ObjectId(id)}, function (err, doc) {
+    res.json(doc);
+  });
+});
+
 app.put('/hostrecord/:id', function (req, res) {
   var id = req.params.id;
   //console.log(req.body.host);
@@ -51,5 +64,6 @@ app.put('/hostrecord/:id', function (req, res) {
   );
 });
 
+// Start Server
 app.listen(3000);
 console.log("Im listening on port 3000");
