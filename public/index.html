@@ -18,9 +18,9 @@
 </ol>
   <div class="container" ng-controller="AppCtrl">
     <h1><i class="fa fa-server"></i>  Device Manager</h1>
-    <p class="lead">When adding new entries, ensure you use the full FQDN for the host.</p>
+    <p class="lead">When adding new entries, ensure you use the full <mark><abbr title="Fully Qualified Domain Name">FQDN</abbr></mark> for the host.</p>
 
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th>Hostname</th>
@@ -37,22 +37,23 @@
           <td><input class="form-control" ng-model="host.ip"></td>
           <td><input class="form-control" ng-model="host.u"></td>
           <td><input class="form-control" ng-model="host.p"></td>
-          <td><button class="btn btn-pri" ng-click="addHost()"><i class="fa fa-plus-square-o fa-1x"> Add Host</button></td>
-          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
-          <button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+          <td><button class="btn btn-primary" ng-click="addHost()"><i class="fa fa-plus"> Add Host</button></td>
+          <td><button class="btn btn-info" ng-click="update()"><i class="fa fa-refresh"> Update</button></i>&nbsp;&nbsp;
+          <button class="btn btn-info" ng-click="deselect()"><i class="fa fa-magic"> Clear</button></td>
         </tr>
         <tr ng-repeat="host in hostrecord">
           <td>{{host.h}}</td>
           <td>{{host.ip}}</td>
           <td>{{host.u}}</td>
           <td>{{host.p}}</td>
-          <td><button class="btn btn-danger" ng-click="remove(host._id)">Remove</button></td>
-          <td><button class="btn btn-warning" ng-click="edit(host._id)">Edit</button></td>
+          <td><button class="btn btn-danger" ng-click="remove(host._id)"><i class="fa fa-trash-o"> Delete</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(host._id)"><i class="fa fa-pencil"> Edit</button></td>
         </tr>
       </tbody>
     </table>
-    
+
   </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular-animate.min.js"></script>
