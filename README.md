@@ -15,19 +15,43 @@ This repo contains the code for a RESTful API Host Records App that was built us
 
 <h3>Instructions</h3>
 
+Firstly, ensure you have git installed 
+
+    sudo apt-get update
+    sudo apt-get install git
+
+You can now clone this repository into your chosen project directory
+
     git clone git@github.com:tomweston/hostrecords.git
 
-then install the Node modules with
+Update and then ensure you have Node.js installed
 
-    npm install
+    sudo apt-get update
+    sudo apt-get install nodejs
 
-then make sure MongoDB is running with
+Install Node Package Manager - This will allow you to easily install modules and packages to use with Node.js
 
-    mongod
+    sudo apt-get install npm
 
-from your MongoDB directory, and then run the code with 
+Then install the Node modules with - Heres where the rest of the MEAN stack come into play
 
-    node server
+    npm install express angular body-parser
+
+Install MongoDB - If you wish to run MongoDB on any other OS, please follow <a href="http://docs.mongodb.org/manual/installation/#installation-guides">MongoDB Installation Guide</a>
+
+    sudo apt-get install -y mongodb-org
+
+Make sure you start up mongod
+
+    sudo service mongod start
+
+Start the node server with
+
+    node server.js
+    
+Navigate to 
+
+<a href="http://localhost:3000">http://localhost:3000</a>
 
 <h3>Todo List</h3>
 
