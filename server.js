@@ -8,12 +8,13 @@ var ping = require ("net-ping");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
-//count
-
-//count
 
 app.get('/hostrecord', function(req, res) {
   //console.log("I recieved a GET request")
+
+  //count
+
+  //count
 
   db.hostrecord.find(function (err, docs) {
     //console.log(docs);
