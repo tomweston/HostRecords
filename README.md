@@ -29,11 +29,11 @@ You can now clone this repository into your chosen project directory
 
 Install Node.js and Node Package Manager (this will allow you to easily install modules and packages to use with Node.js)
 
-    sudo apt-get install nodejs npm
+    sudo apt-get install nodejs
 
 Then install the Node modules with - Heres where the rest of the MEAN stack come into play
 
-    npm install express  --save body-parser
+    npm install express --save body-parser mongojs
 
 Install MongoDB - If you wish to run MongoDB on any other OS, please follow <a href="http://docs.mongodb.org/manual/installation/#installation-guides">MongoDB Installation Guide</a>
 
