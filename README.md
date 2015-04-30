@@ -35,7 +35,7 @@ Install Node Package Manager - This will allow you to easily install modules and
 
 Then install the Node modules with - Heres where the rest of the MEAN stack come into play
 
-    npm install express angular body-parser
+    npm install express body-parser
 
 Install MongoDB - If you wish to run MongoDB on any other OS, please follow <a href="http://docs.mongodb.org/manual/installation/#installation-guides">MongoDB Installation Guide</a>
 
